@@ -24,7 +24,7 @@ class StockViewSet(ModelViewSet):
     serializer_class = StockSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter] 
     filterset_fields = ['products',]
-    search_fields = ['products__title',]
+    search_fields = ['products__title', 'products__description']
     pagination_class = PageNumberPagination
     pagination_class.page_size = 5
 
